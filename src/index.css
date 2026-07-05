@@ -1,0 +1,13 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* Define the rotation animation utility and keyframe in v4 format */
+  --animate-border-spin: border-spin 3s linear infinite;
+
+  @keyframes border-spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
