@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { MdCached } from 'react-icons/md'; 
 export function SnakeBorderButton({ 
   text , 
   onClick,
@@ -30,8 +30,8 @@ export function SnakeBorderButton({
       />
 
       {/* Inner button layer masking the center background */}
-      <span className=" bg-slate-900 relative px-5 py-2.5 transition-all ease-in duration-120 rounded-md group-hover:bg-opacity-0">
-        {children || text}
+      <span className="flex bg-slate-900 relative px-8 py-2.5 transition-all ease-in duration-120 rounded-md group-hover:bg-opacity-0">
+         <MdCached  className='text-xl' /> {children || text}
       </span>
     </button>
   );

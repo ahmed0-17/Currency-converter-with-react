@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Components from "./components";
 import useCurrencyConvertor from "./hooks/useCurrencyConvertor";
+import { HiArrowsRightLeft } from 'react-icons/hi2'
+
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -94,7 +96,8 @@ function App() {
                 duration-300
               "
             >
-              Swap
+              <HiArrowsRightLeft className="inline-block mr-2" />
+              <span className="inline-block">Swap</span>
             </button>
           </div>
 
@@ -113,7 +116,7 @@ function App() {
           {/* Convert Button */}
           <Components.SnakeBorderButton
             onClick={convert}
-            text={`Convert ${from.toUpperCase()} to ${to.toUpperCase()}`}
+            text={`${from.toUpperCase()} to ${to.toUpperCase()}`}
           />
         </form>
       </div>
